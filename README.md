@@ -20,7 +20,7 @@ conversion of multiple images (in this case, bar plots) to a video file.
 	+ A useful paper describing the functions available in the package can be found at
  http://www.jstatsoft.org/v53/i01/paper
  
- +	The function saveVideo(), from the animation package, is called by vembar. This function 
+ + The function saveVideo(), from the animation package, is called by vembar. This function 
  requires that the program FFmpeg be installed on the local computer. FFmpeg is free software for,
  among other things, the conversion of image files to video.
  
@@ -35,23 +35,23 @@ conversion of multiple images (in this case, bar plots) to a video file.
  ## Function Arguments
  + filepath: this is the file path for the data file to be processed. 
  For example "C:/Users/Kevin/Documents/Data/datafile1.csv"
- 
  + ffmdir: this is the path for the application ffmpeg.exe, which is used as an argument
  to the function saveVideo(), which coverts the series of bar plots into a video file. Once
  you have installed FFmpeg on your computer, it is recommended that you add an appropriate 
- default value to this argument in the function definition line. For example, the first 
- line of the function currently reads: vembar <- function (filepath,ffmdir,outputdir=getwd()){
+ default value to this argument in the function definition line. 
+	+For example, the first line of the function currently reads:
+	vembar <- function (filepath,ffmdir,outputdir=getwd()){
  
- If ffmpeg.exe is located at C:/Program Files/FFmpeg/bin/ffmpeg.exe on your computer, you would 
+	+If ffmpeg.exe is located at C:/Program Files/FFmpeg/bin/ffmpeg.exe on your computer, you would 
  change the first line of the function to read:
 vembar <- function (filepath,ffmdir="C:/Program Files/FFmpeg/bin/ffmpeg.exe",outputdir=getwd()){
 this will prevent you from having to remember and enter the file path each time you call the function.
 
- +	outputdir: this is the directory into which the video file and processed data file will be created.
++	outputdir: this is the directory into which the video file and processed data file will be created.
  The default value is the current working directory.
  
  ## Function Output
- + The function generates a series of .png images, stored in the temporary folder for the R session,
++ The function generates a series of .png images, stored in the temporary folder for the R session,
  containing bar plots for each data point in the file.
 + A video file with the same name as the data file, but a .mp4 extension is generated in the 
 directory specified by the outputdir argument
@@ -64,10 +64,10 @@ directory specified by the outputdir argument
  "processed_datafile1.csv"
 
  ## Notes
- + Since the function generates one .png file for each data point and then converts them to .mp4 
++ Since the function generates one .png file for each data point and then converts them to .mp4 
  format, the process takes a while: up to 1-2 minutes depending on the length of the data file, 
  CPU, and available RAM.
- + The function file is commented in much detail and is another good source of information about
++ The function file is commented in much detail and is another good source of information about
  the function.
 
  
