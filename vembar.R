@@ -2,7 +2,7 @@
 
 vembar <- function (filepath,ffmdir,outputdir=getwd()){
   #Developed by Kevin Schwartzenberg
-  #Updated 2014/05/02
+  #Updated 2014/10/10
   
   #This function takes as input the file location of a .csv data file containing
   # three columns (time in seconds, FF, and Inside Mask), processes the data and
